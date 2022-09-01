@@ -1,0 +1,11 @@
+{
+    "appName": {
+        "message": "Timezone Converter"
+    },
+    "appShortName": {
+        "message": "Timezone Converter"
+    },
+    "appDescription": {
+        "message": "Converts timestamps to user's timezone"
+    }
+}
