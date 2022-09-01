@@ -6,7 +6,7 @@
     "author": "Alexander Biba",
     "repository": {
         "type": "git",
-        "url": "ENTER GIT REPO URL"
+        "url": "https://github.com/AlexanderBiba/timezone-converter-extension"
     },
     "scripts": {
         "start": "xt-build -e dev -w",
@@ -45,5 +45,8 @@
                 "src": "./src/**/*.js"
             }
         ]
+    },
+    "dependencies": {
+        "chrono-node": "^2.4.1"
     }
 }
