@@ -41,8 +41,21 @@
     "xtbuild": {
         "js_bundles": [
             {
+                "name": "popup",
+                "src": "./src/popup.js"
+            },
+            {
                 "name": "background",
-                "src": "./src/**/*.js"
+                "src": [
+                    "./src/**/*.js",
+                    "!./src/popup.js"
+                ]
+            }
+        ],
+        "scss_bundles": [
+            {
+                "name": "popup",
+                "src":"./src/popup.scss"
             }
         ]
     },

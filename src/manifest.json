@@ -8,7 +8,7 @@
     "manifest_version": 3,
     "default_locale": "en",
     "minimum_chrome_version": "88",
-    "permissions": ["scripting", "webNavigation"],
+    "permissions": ["scripting", "webNavigation", "storage"],
     "host_permissions": ["*://*/*"],
     "icons": {
         "128": "assets/img/128x128.png"
@@ -22,6 +22,7 @@
             "24": "assets/img/24x24.png",
             "32": "assets/img/32x32.png"
         },
-        "default_title": "__MSG_appName__"
+        "default_title": "__MSG_appName__",
+        "default_popup": "popup.html"
     }
 }
