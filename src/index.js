@@ -7,7 +7,9 @@ chrome.webNavigation.onCompleted.addListener(({ tabId, frameType }) => {
         func: function() {
             document.body.addEventListener("mouseup", e => {
                 const selectedText = window.getSelection().toString();
-                if (selectedText) chrome.runtime.sendMessage(selectedText, transformedTimestamp => {
+                if (!selectedText) return;
+                chrome.runtime.sendMessage(selectedText, transformedTimestamp => {
+                    if (!transformedTimestamp) return;
                     const popup = document.createElement("div");
                     popup.append(document.createTextNode(transformedTimestamp));
                     Object.assign(popup.style, {
@@ -18,7 +20,8 @@ chrome.webNavigation.onCompleted.addListener(({ tabId, frameType }) => {
                         padding: "5px",
                         border: "5px",
                         borderRadius: "10px"
-                    })
+                    });
+                    setTimeout(() => popup.remove(), 10_000);
                     popup.addEventListener("click", () => popup.remove());
                     document.body.appendChild(popup);
                 });
@@ -29,9 +32,6 @@ chrome.webNavigation.onCompleted.addListener(({ tabId, frameType }) => {
 });
 
 chrome.runtime.onMessage.addListener((msg, sender, callback) => {
-    chrome.storage.sync.get("timezone", ({ timezone: timeZone }) => {
-        const transformedTimestamp = parseDate(msg)?.toLocaleString("en-US", { timeZone })
-        if (transformedTimestamp) callback(transformedTimestamp);
-    });
+    chrome.storage.sync.get("timezone", ({ timezone: timeZone }) => callback(parseDate(msg)?.toLocaleString("en-US", { timeZone })));
     return true
 });
