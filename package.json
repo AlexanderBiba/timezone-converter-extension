@@ -45,21 +45,27 @@
                 "src": "./src/popup.js"
             },
             {
+                "name": "client",
+                "src": "./src/client.js"
+            },
+            {
                 "name": "background",
-                "src": [
-                    "./src/**/*.js",
-                    "!./src/popup.js"
-                ]
+                "src": "./src/index.js"
             }
         ],
         "scss_bundles": [
             {
                 "name": "popup",
-                "src":"./src/popup.scss"
+                "src": "./src/popup.scss"
+            },
+            {
+                "name": "client",
+                "src": "./src/client.scss"
             }
         ]
     },
     "dependencies": {
-        "chrono-node": "^2.4.1"
+        "chrono-node": "^2.4.1",
+        "toastify-js": "^1.12.0"
     }
 }
