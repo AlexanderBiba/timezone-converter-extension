@@ -1,6 +1,6 @@
 # <img src="public/icons/icon_48.png" width="45" align="left"> Timezone Converter
 
-This extension allows easy conversion of freeform text timestamps to a user-configured timezone
+This extension allows easy conversion of natural language timestamps to a user-configured timezone
 
 ## Usage
 
@@ -11,7 +11,7 @@ This extension allows easy conversion of freeform text timestamps to a user-conf
 
 ## Features
 
-- Parses freeform timestamps
+- Parses natural language timestamps
 - User configured timezone
 - Popup configuration
 
