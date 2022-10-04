@@ -1,17 +1,17 @@
 # <img src="public/icons/icon_48.png" width="45" align="left"> Timezone Converter
 
-This extension allows easy conversion of free-form-text timestamps to a user-configured timezone
+This extension allows easy conversion of freeform text timestamps to a user-configured timezone
 
 ## Usage
 
 1. Set your timezone in the extension popup
-1. On any webpage, use your mouse to select text containing a timestamp, e.g. Sat Aug 17 2013 18:40:39 GMT+0900 (JST)
-1. A popup containing the timestamp converted to your timezone will appear
+1. Use your mouse to select text containing a timestamp, e.g. Sat Aug 17 2013 18:40:39 GMT+0900 (JST)
+1. A popup containing the timestamp converted to your timezone will appear:
 ![Timezone Converter Demo Screenshot](demo/demo_screenshot.png)
 
 ## Features
 
-- Parses free-form timestamps
+- Parses freeform timestamps
 - User configured timezone
 - Popup configuration
 
