@@ -1,71 +1,25 @@
 {
-    "name": "timezone-converter",
-    "description": "Converts timestamps to user's timezone",
-    "version": "0.0.1",
-    "homepage": "http://chrome.google.com/webstore",
-    "author": "Alexander Biba",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/AlexanderBiba/timezone-converter-extension"
-    },
-    "scripts": {
-        "start": "xt-build -e dev -w",
-        "start:firefox": "xt-build -e dev -p firefox -w",
-        "build": "xt-build -e prod",
-        "build:firefox": "xt-build -e prod -p firefox",
-        "clean": "xt-clean",
-        "docs": "xt-docs",
-        "test": "xt-test",
-        "coverage": "nyc --reporter=lcov npm run test",
-        "sync": "xt-sync"
-    },
-    "babel": {
-        "presets": [
-            "@babel/preset-env"
-        ]
-    },
-    "eslintIgnore": [
-        "test/**/*"
-    ],
-    "devDependencies": {
-        "extension-cli": "latest"
-    },
-    "xtdocs": {
-        "source": {
-            "include": [
-                "README.md",
-                "src"
-            ]
-        }
-    },
-    "xtbuild": {
-        "js_bundles": [
-            {
-                "name": "popup",
-                "src": "./src/popup.js"
-            },
-            {
-                "name": "client",
-                "src": "./src/client.js"
-            },
-            {
-                "name": "background",
-                "src": "./src/index.js"
-            }
-        ],
-        "scss_bundles": [
-            {
-                "name": "popup",
-                "src": "./src/popup.scss"
-            },
-            {
-                "name": "client",
-                "src": "./src/client.scss"
-            }
-        ]
-    },
-    "dependencies": {
-        "chrono-node": "^2.4.1",
-        "toastify-js": "^1.12.0"
-    }
+  "name": "timezone-converter",
+  "version": "0.1.0",
+  "description": "My Chrome Extension",
+  "private": true,
+  "scripts": {
+    "watch": "webpack --mode=development --watch --config config/webpack.config.js",
+    "build": "webpack --mode=production --config config/webpack.config.js",
+    "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\""
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "prettier": "^2.7.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "chrono-node": "^2.4.1",
+    "toastify-js": "^1.12.0"
+  }
 }
