@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="popup.css">
+        <meta charset="UTF-8" />
+        <title>My Chrome Extension</title>
+        <link rel="stylesheet" href="popup.css" />
     </head>
     <body>
         <h3 class="title">Timezone Configuration</h3>
         <select id="tz-selector"></select>
+
+        <h3 class="title">Popup Configuration</h3>
+        <p class="selector-label">Gravity <select id="gravity-selector"></select></p>
+        <p class="selector-label">Position <select id="position-selector"></select></p>
+        <p class="selector-label">Duration (sec) <input id="duration-input" type="number" /></p>
+
         <script src="popup.js"></script>
     </body>
 </html>
